@@ -18,7 +18,7 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
-      node: { extensions: ['.js', '.cjs', '.mjs', '.ts'] }
+      node: { extensions: ['.js', '.cjs', '.mjs', '.jsx', '.ts', 'tsx'] }
     }
   },
 
@@ -27,7 +27,7 @@ module.exports = {
   overrides: [
     // TypeScript
     {
-      files: ['*.ts', '*.d.ts'],
+      files: ['*.ts', '*.tsx', '*.d.ts'],
       extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/eslint-recommended',
@@ -48,7 +48,7 @@ module.exports = {
 
     // Vite env files
     {
-      files: ['env.d.ts'],
+      files: ['env.d.ts', 'vite-env.d.ts'],
       rules: {
         '@typescript-eslint/naming-convention': [
           'error',
@@ -65,7 +65,7 @@ module.exports = {
 
     // Plain js
     {
-      files: ['*.js', '*.cjs', '*.mjs'],
+      files: ['*.js', '*.cjs', '*.mjs', '*.jsx'],
       rules: { '@typescript-eslint/no-var-requires': 'off' }
     }
   ]
