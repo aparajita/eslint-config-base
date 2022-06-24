@@ -1,6 +1,6 @@
 # @aparajita/eslint-config-base
 
-This config for JavaScript and TypeScript contains an extremely complete set of rules that maximizes type safety and automatic formatting of source code. It was created to make sharing between my projects much easier, and to have a single source of truth for my eslint config. You may find it useful as well.
+This config for JavaScript/TypeScript contains an extremely complete set of rules that maximizes type safety and automatic formatting of source code. It was created to make sharing between my projects much easier, and to have a single source of truth for my eslint config. You may find it useful as well.
 
 ## Installation
 
@@ -10,14 +10,32 @@ This config for JavaScript and TypeScript contains an extremely complete set of 
 
 This config has several peer dependencies which you may need to install as devDependencies as well:
 
+```json
+{
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": ">=5.29.0",
+    "@typescript-eslint/parser": ">=5.29.0",
+    "eslint": ">=8.18.0",
+    "eslint-config-standard": ">=17.0.0",
+    "eslint-plugin-import": ">=2.26.0",
+    "eslint-plugin-n": ">=15.2.3",
+    "eslint-plugin-prettier": ">=4.0.0",
+    "eslint-plugin-promise": ">=6.0.0",
+    "prettier": ">=2.7.1",
+    "typescript": ">=4.7.4"
+  }
+}
 ```
-@typescript-eslint/eslint-plugin: >=5.29.0,
-eslint: >=8,
-eslint-config-standard: >=17.0.0,
-eslint-plugin-import: >=2.26.0,
-eslint-plugin-n: >=15.2.3,
-eslint-plugin-promise: >=6.0.0,
-typescript: >=4.7.4
+```shell
+% pnpm add -D \
+eslint prettier typescript \
+@typescript-eslint/eslint-plugin \
+@typescript-eslint/parser \
+eslint-config-standard \
+eslint-plugin-import \
+eslint-plugin-n \
+eslint-plugin-prettier \
+eslint-plugin-promise
 ```
 
 ## Usage
@@ -26,22 +44,50 @@ In order to use this config, add it to the `extends` clause of your eslint confi
 
 ```js
 module.exports = {
-  extends: [
-    '@aparajita/base'
+  extends: ['@aparajita/base']
+}
+```
+
+The `@typescript-eslint` plugin used by this config needs to know the directory where your root tsconfig is, and the name of your root tsconfig. By default, these are set to `process.cwd()` and `process.cwd()/tsconfig.json` respectively.
+
+If your root tsconfig is not in the directory from which eslint will be run, add the following to the eslint config of your project.
+
+```js
+const path = require('path')
+
+// Set this however you want: relative, absolute,
+// calculated, whatever.
+const rootTsconfigPath = '/path/to/root/tsconfig.json'
+
+module.exports = {
+  extends: ['@aparajita/base'],
+  parserOptions: {
+    tsconfigRootDir: path.dirname(rootTsconfigPath)
+  },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx', '*.d.ts'],
+      parserOptions: {
+        project: rootTsconfigPath
+      }
+    }
   ]
 }
 ```
 
-In the root eslint config of your project, you have to tell the TypeScript eslint plugin where the root tsconfig directory is.
+If your project builds multiple products with separate tsconfig files, you will need to tell this config about it. For example, let’s say you are building a CLI tool with a separate tsconfig in addition to something else. Here’s how you might do it.
 
 ```js
 module.exports = {
-  extends: [
-    '@aparajita/base'
-  ],
-  parserOptions: {
-    tsconfigRootDir: __dirname
-  }
+  extends: ['@aparajita/base'],
+  overrides: [
+    {
+      files: ['./cli/make-ios-plugin.ts'],
+      parserOptions: {
+        project: './tsconfig-cli.json'
+      }
+    }
+  ]
 }
 ```
 
