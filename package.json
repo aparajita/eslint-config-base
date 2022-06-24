@@ -13,7 +13,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint.fix": "eslint --fix .",
-    "release": "pnpm dlx commit-and-tag-version",
+    "release": "commit-and-tag-version",
     "push": "git push --follow-tags origin main && pnpm publish"
   },
   "peerDependencies": {
