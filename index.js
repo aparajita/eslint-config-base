@@ -13,7 +13,8 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
-    allowAutomaticSingleRunInference: true
+    allowAutomaticSingleRunInference: true,
+    tsconfigRootDir: process.cwd()
   },
   settings: {
     'import/resolver': {
@@ -34,7 +35,7 @@ module.exports = {
       ],
       parser: '@typescript-eslint/parser',
       parserOptions: {
-        project: './tsconfig.json'
+        project: join(process.cwd(), 'tsconfig.json')
       },
       rules: { ...kTypeScriptRules }
     },
