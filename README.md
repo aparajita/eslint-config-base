@@ -1,6 +1,6 @@
 # @aparajita/eslint-config-base
 
-This config for JavaScript/TypeScript contains an extremely complete set of rules that maximizes type safety and automatic formatting of source code. It was created to make sharing between my projects much easier, and to have a single source of truth for my eslint config. You may find it useful as well.
+This config for JavaScript/TypeScript contains an extremely complete (and quite strict) set of rules that maximizes type safety and automatic formatting of source code. It was created to make sharing between my projects much easier, and to have a single source of truth for my eslint config. You may find it useful as well.
 
 ## Installation
 
