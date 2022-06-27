@@ -176,7 +176,7 @@ const kTypeScriptRules = {
     'error',
     {
       'ts-expect-error': 'allow-with-description',
-      'ts-ignore': 'allow-with-description',
+      'ts-ignore': true,
       'ts-nocheck': true,
       'ts-check': false,
       minimumDescriptionLength: 7
@@ -323,6 +323,7 @@ const kTypeScriptRules = {
   '@typescript-eslint/prefer-regexp-exec': 'error',
   '@typescript-eslint/prefer-return-this-type': 'error',
   '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+  '@typescript-eslint/prefer-ts-expect-error': 'error',
   '@typescript-eslint/promise-function-async': 'error',
   ...fromBaseRule('quotes'),
   '@typescript-eslint/require-array-sort-compare': [
