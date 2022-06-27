@@ -15,7 +15,7 @@
     "lint": "eslint .",
     "lint.fix": "eslint --fix .",
     "release": "commit-and-tag-version",
-    "push": "git push --follow-tags origin main && pnpm publish"
+    "push": "git push --follow-tags origin main"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">=5.29.0",
