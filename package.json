@@ -1,12 +1,13 @@
 {
   "name": "@aparajita/eslint-config-base",
   "version": "1.0.0",
-  "description": "My crazy eslint rules for JavaScript + TypeScript",
+  "description": "My crazy eslint rules for JavaScript + TypeScript + prettier",
   "main": "index.js",
   "keywords": [
     "eslint",
     "eslintconfig",
-    "typescript"
+    "typescript",
+    "prettier"
   ],
   "author": "Aparajita Fishman",
   "license": "MIT",
