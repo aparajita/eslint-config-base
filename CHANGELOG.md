@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.1.0](https://github.com/aparajita/eslint-config-base/compare/v1.0.0...v1.1.0) (2022-06-28)
+
+
+### Features
+
+* prettier is kept separate, as it should be ([45e9840](https://github.com/aparajita/eslint-config-base/commit/45e984003cd721d8865bec2f806e62d87ebe0296))
+
+
+### Bug Fixes
+
+* don’t check/format these ([378cc2f](https://github.com/aparajita/eslint-config-base/commit/378cc2ff28434065c3b43f70d9b2558bf008b74a))
+* have to include prettier in extends ([f821147](https://github.com/aparajita/eslint-config-base/commit/f821147f5b6fdb67a74017729ca979b33fa38044))
+
+
+### Maintenance
+
+* add missing fields ([a5e5e59](https://github.com/aparajita/eslint-config-base/commit/a5e5e596231756d695a5902158202a16b3f615fc))
+* add test files ([82a79e9](https://github.com/aparajita/eslint-config-base/commit/82a79e9708946e0755168ed31a449cab67ed0b42))
+* docs ([d577dda](https://github.com/aparajita/eslint-config-base/commit/d577ddaba7dfc55f70670a491dde644cb5f3608e))
+* don’t commit .idea ([9dad6bb](https://github.com/aparajita/eslint-config-base/commit/9dad6bbcf2b7dd6e6fe17fc13133ec577fc42209))
+* move prettier shared config to package.json ([9d11e80](https://github.com/aparajita/eslint-config-base/commit/9d11e8039f6a2ab077a8d93cc8abecf05f44eefe))
+* ran prettier ([7ed9fa8](https://github.com/aparajita/eslint-config-base/commit/7ed9fa888999dbb0a234508fae1c9f42940505e7))
+* remove useless path segment ([74d76de](https://github.com/aparajita/eslint-config-base/commit/74d76de1e2212142ba0afa43f31a2720751a840c))
+* reorg ([ca34c10](https://github.com/aparajita/eslint-config-base/commit/ca34c10950db1e4e2532261bfd90200ffae71af3))
+* update deps ([98f7c03](https://github.com/aparajita/eslint-config-base/commit/98f7c03a39bc3373bf256c8955e71b51e2125809))
+
 ## 1.0.0 (2022-06-27)
 
 
