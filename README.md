@@ -50,26 +50,24 @@ module.exports = {
 }
 ```
 
-The `@typescript-eslint` plugin used by this config needs to know the directory where your root tsconfig is, and the name of your root tsconfig. By default, these are set to `process.cwd()` and `process.cwd()/tsconfig.json` respectively.
+If you are linting TypeScript, the `@typescript-eslint` plugin used by this config needs to know the directory where your root tsconfig is and its name. By default, these are set to `process.cwd()` and `process.cwd()/tsconfig.json` respectively.
 
 If your root tsconfig is not in the directory from which eslint will be run, add the following to the eslint config of your project.
 
 ```js
 const path = require('path')
 
-// Set this however you want: relative, absolute,
-// calculated, whatever.
-const rootTsconfigPath = '/path/to/root/tsconfig.json'
+// Set this however you want: relative, absolute, calculated, whatever
+const rootTsconfigPath = path.resolve('/path/to/root/tsconfig.json')
 
 module.exports = {
   extends: ['@aparajita/base'],
-  parserOptions: {
-    tsconfigRootDir: path.dirname(rootTsconfigPath)
-  },
+
   overrides: [
     {
-      files: ['*.ts', '*.tsx', '*.d.ts'],
+      files: ['*.ts', '*.tsx'],
       parserOptions: {
+        tsconfigRootDir: path.dirname(rootTsconfigPath),
         project: rootTsconfigPath
       }
     }
@@ -92,6 +90,10 @@ module.exports = {
   ]
 }
 ```
+
+### Caching
+
+Some of the TypeScript rules in this config require the linter to parse your TypeScript files. This can [affect performance](https://typescript-eslint.io/docs/linting/type-linting#how-is-performance). Therefore, it is recommended that you use the [`--cache` option](https://eslint.org/docs/latest/user-guide/command-line-interface.html#--cache) with `eslint` so that each lint run will only lint files that have changed. Be sure to add the cache file to `.gitignore`!
 
 ## Coding style
 
