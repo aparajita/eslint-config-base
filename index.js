@@ -1,72 +1,25 @@
-const { join } = require('path')
-const { kBaseRules, kNamingConventions, kTypeScriptRules } = require('./rules')
+const { baseRules, importRules, overrides } = require('./lib/base')
+const { typeScriptOverrides } = require('./lib/typescript')
 
 module.exports = {
   extends: [
     'eslint:recommended',
     'standard',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:import/typescript'
+    'plugin:import/recommended',
+    'prettier' // must be last!
   ],
-  plugins: ['@typescript-eslint'],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    sourceType: 'module',
-    allowAutomaticSingleRunInference: true,
-    tsconfigRootDir: process.cwd()
-  },
+  plugins: ['import'],
   settings: {
     'import/resolver': {
-      node: { extensions: ['.js', '.cjs', '.mjs', '.jsx', '.ts', 'tsx'] }
+      node: { extensions: ['.js', '.cjs', '.mjs', '.jsx', '.ts', '.tsx'] },
+      typescript: {
+        alwaysTryTypes: true
+      }
     }
   },
-
-  rules: kBaseRules,
-
-  overrides: [
-    // TypeScript
-    {
-      files: ['*.ts', '*.tsx', '*.d.ts'],
-      extends: [
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking'
-      ],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        project: join(process.cwd(), 'tsconfig.json')
-      },
-      rules: { ...kTypeScriptRules }
-    },
-
-    // TypeScript definitions
-    {
-      files: ['*.d.ts'],
-      rules: { 'spaced-comment': 'off' }
-    },
-
-    // Vite env files
-    {
-      files: ['env.d.ts', 'vite-env.d.ts'],
-      rules: {
-        '@typescript-eslint/naming-convention': [
-          'error',
-          {
-            selector: ['typeProperty'],
-            format: ['UPPER_CASE'],
-            filter: '^VITE_'
-          },
-
-          ...kNamingConventions
-        ]
-      }
-    },
-
-    // Plain js
-    {
-      files: ['*.js', '*.cjs', '*.mjs', '*.jsx'],
-      rules: { '@typescript-eslint/no-var-requires': 'off' }
-    }
-  ]
+  rules: {
+    ...baseRules,
+    ...importRules
+  },
+  overrides: [...overrides, ...typeScriptOverrides]
 }
