@@ -13,28 +13,27 @@ This config has several peer dependencies which you may need to install as devDe
 ```json
 {
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": ">=5.29.0",
-    "@typescript-eslint/parser": ">=5.29.0",
-    "eslint": ">=8.18.0",
-    "eslint-config-standard": ">=17.0.0",
-    "eslint-plugin-import": ">=2.26.0",
-    "eslint-plugin-n": ">=15.2.3",
-    "eslint-plugin-prettier": ">=4.0.0",
-    "eslint-plugin-promise": ">=6.0.0",
-    "prettier": ">=2.7.1",
-    "typescript": ">=4.7.4"
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-import-resolver-typescript": "^3.1.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.3",
+    "eslint-plugin-promise": "^6.0.0",
+    "typescript": "^4.7.4"
   }
 }
 ```
 ```shell
 % pnpm add -D \
-eslint prettier typescript \
+eslint typescript \
 @typescript-eslint/eslint-plugin \
 @typescript-eslint/parser \
 eslint-config-standard \
 eslint-plugin-import \
 eslint-plugin-n \
-eslint-plugin-prettier \
 eslint-plugin-promise
 ```
 
@@ -94,6 +93,10 @@ module.exports = {
 ## Coding style
 
 In terms of coding style, this config follows [standard js](https://standardjs.com/rules.html) with the exception of disallowing a space after function name declarations ([space-before-function-paren](https://eslint.org/docs/rules/space-before-function-paren.html)).
+
+Any formatting rules that [`Prettier`](https://prettier.io) handles are not enforced by this config. I have found I can avoid a lot of problems by configuring and running `prettier` separately from `eslint`. As the `prettier` authors point out about integrating `prettier` with `eslint`:
+
+> You end up with a lot of red squiggly lines in your editor, which gets annoying. Prettier is supposed to make you forget about formatting – and not be in your face about it!
 
 ## Rule philosophy
 

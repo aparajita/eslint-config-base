@@ -1,13 +1,12 @@
 {
   "name": "@aparajita/eslint-config-base",
   "version": "1.0.0",
-  "description": "My crazy eslint rules for JavaScript + TypeScript + prettier",
+  "description": "My crazy eslint rules for JavaScript + TypeScript",
   "main": "index.js",
   "keywords": [
     "eslint",
     "eslintconfig",
-    "typescript",
-    "prettier"
+    "typescript"
   ],
   "author": "Aparajita Fishman",
   "license": "MIT",
@@ -27,9 +26,7 @@
     "eslint-config-standard": ">=17.0.0",
     "eslint-plugin-import": ">=2.26.0",
     "eslint-plugin-n": ">=15.2.3",
-    "eslint-plugin-prettier": ">=4.0.0",
     "eslint-plugin-promise": ">=6.0.0",
-    "prettier": ">=2.7.1",
     "typescript": ">=4.7.4"
   },
   "devDependencies": {
@@ -40,7 +37,6 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.3",
-    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
