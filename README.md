@@ -26,12 +26,15 @@ This config has several peer dependencies which you may need to install as devDe
   }
 }
 ```
+
 ```shell
 % pnpm add -D \
 eslint typescript \
 @typescript-eslint/eslint-plugin \
 @typescript-eslint/parser \
+eslint-config-prettier \
 eslint-config-standard \
+eslint-import-resolver-typescript \
 eslint-plugin-import \
 eslint-plugin-n \
 eslint-plugin-promise
