@@ -23,24 +23,16 @@
     "sourceMap": true,
     "strict": true,
     "target": "esnext",
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "useDefineForClassFields": true,
     "useUnknownInCatchVariables": true,
     "lib": ["esnext"],
-
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
       "~/*": ["src/*"]
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.d.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
- }
+  "include": ["**/*.ts", "**/*.d.ts"],
+  "exclude": ["node_modules"]
+}
