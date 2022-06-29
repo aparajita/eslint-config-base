@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [1.1.1](https://github.com/aparajita/eslint-config-base/compare/v1.1.0...v1.1.1) (2022-06-29)
+
+
+### Bug Fixes
+
+* tsconfig path ([6d85e17](https://github.com/aparajita/eslint-config-base/commit/6d85e1753111a7aea9c0eb884379ad2f61349b06))
+
 ## [1.1.0](https://github.com/aparajita/eslint-config-base/compare/v1.0.0...v1.1.0) (2022-06-28)
 
 
