@@ -68,7 +68,7 @@ module.exports = {
       files: ['*.ts', '*.tsx'],
       parserOptions: {
         tsconfigRootDir: path.dirname(rootTsconfigPath),
-        project: rootTsconfigPath
+        project: [rootTsconfigPath]
       }
     }
   ]
