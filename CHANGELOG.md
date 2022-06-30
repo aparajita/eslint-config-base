@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [1.1.2](https://github.com/aparajita/eslint-config-base/compare/v1.1.1...v1.1.2) (2022-06-30)
+
+
+### Bug Fixes
+
+* add more import extensions ([3a6eb36](https://github.com/aparajita/eslint-config-base/commit/3a6eb36e413bef1b693e76a517740cd8e8262ab2))
+
+
+### Maintenance
+
+* add tsconfigRootDir to be safe ([c603886](https://github.com/aparajita/eslint-config-base/commit/c603886a3d05af44a1e0995c2b2139d387ab5c53))
+
 ### [1.1.1](https://github.com/aparajita/eslint-config-base/compare/v1.1.0...v1.1.1) (2022-06-29)
 
 
