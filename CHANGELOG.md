@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [1.1.3](https://github.com/aparajita/eslint-config-base/compare/v1.1.2...v1.1.3) (2022-07-09)
+
+
+### Bug Fixes
+
+* no function use-before-define ([f0369e6](https://github.com/aparajita/eslint-config-base/commit/f0369e6687f1d8a4dc612ede8b1b458c5888dfe9))
+
+
+### Maintenance
+
+* nicer checkmarks ([d7504f6](https://github.com/aparajita/eslint-config-base/commit/d7504f6c05b7357f055f4d037b08e065c707389b))
+* update release scripts ([8380304](https://github.com/aparajita/eslint-config-base/commit/8380304900b8d4e97e6d3c486a7e9762b1627f3a))
+
 ### [1.1.2](https://github.com/aparajita/eslint-config-base/compare/v1.1.1...v1.1.2) (2022-06-30)
 
 
