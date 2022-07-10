@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [1.1.4](https://github.com/aparajita/eslint-config-base/compare/v1.1.3...v1.1.4) (2022-07-10)
+
+
+### Bug Fixes
+
+* allow members with leading underscore ([1ec7eec](https://github.com/aparajita/eslint-config-base/commit/1ec7eeca3703ffc3bf440828a1a0765f86bb3319))
+
 ### [1.1.3](https://github.com/aparajita/eslint-config-base/compare/v1.1.2...v1.1.3) (2022-07-09)
 
 
