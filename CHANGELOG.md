@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [1.1.5](https://github.com/aparajita/eslint-config-base/compare/v1.1.4...v1.1.5) (2022-07-24)
+
+
+### Bug Fixes
+
+* allow namespace import from package.json ([0bfeaf5](https://github.com/aparajita/eslint-config-base/commit/0bfeaf55c21b0db948abf65ad668188a56ac111f))
+
 ### [1.1.4](https://github.com/aparajita/eslint-config-base/compare/v1.1.3...v1.1.4) (2022-07-10)
 
 
