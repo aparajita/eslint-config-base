@@ -46,7 +46,7 @@ In order to use this config, add it to the `extends` clause of your eslint confi
 
 ```js
 module.exports = {
-  extends: ['@aparajita/base']
+  extends: ['@aparajita/base'],
 }
 ```
 
@@ -68,10 +68,10 @@ module.exports = {
       files: ['*.ts', '*.tsx'],
       parserOptions: {
         tsconfigRootDir: path.dirname(rootTsconfigPath),
-        project: [rootTsconfigPath]
-      }
-    }
-  ]
+        project: [rootTsconfigPath],
+      },
+    },
+  ],
 }
 ```
 
@@ -85,10 +85,10 @@ module.exports = {
       files: ['./cli/make-ios-plugin.ts'],
       parserOptions: {
         tsconfigRootDir: '.',
-        project: './tsconfig-cli.json'
-      }
-    }
-  ]
+        project: './tsconfig-cli.json',
+      },
+    },
+  ],
 }
 ```
 
