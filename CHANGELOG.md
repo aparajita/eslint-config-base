@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.1.6](https://github.com/aparajita/eslint-config-base/compare/v1.1.5...v1.1.6) (2023-09-30)
+
+
+### Maintenance
+
+* update deps, no prettier plugin, format ([6dcdd3a](https://github.com/aparajita/eslint-config-base/commit/6dcdd3a4453b1df609454c4e9b3e145e70d658b0))
+
 ### [1.1.5](https://github.com/aparajita/eslint-config-base/compare/v1.1.4...v1.1.5) (2022-07-24)
 
 
